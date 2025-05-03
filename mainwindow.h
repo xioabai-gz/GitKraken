@@ -39,6 +39,7 @@ private slots:
     void on_hSliderIlluminationLimit_actionTriggered();
 
     void on_groupBoxAlarm_clicked(bool checked);
+    void on_hSliderWindSpeedLimit_actionTriggered(int action);
 };
 
 #endif // MAINWINDOW_H

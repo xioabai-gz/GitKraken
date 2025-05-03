@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->setWindowTitle("气象检测站");
 
     m_GY39Device = new ClassGY39();
     m_PR3000Device = new ClassPR3000();
@@ -28,6 +29,7 @@ void MainWindow::printLog(QString log1, QString log2)
     QString time = QDateTime::currentDateTime().time().toString();     //获取当前时间
     QString log = QString("%1  %2  %3").arg(time).arg(log1).arg(log2); //生成日志内容
     ui->textEditLog->append(log);                                      //输出日志
+    ui->textEditLog->setReadOnly(true);
 }
 
 void MainWindow::on_pushButtonClearLog_clicked()
@@ -130,6 +132,8 @@ void MainWindow::on_hSliderWindSpeedLimit_actionTriggered()
     ui->labelWindSpeedLimit->setText(QString::number(ui->hSliderWindSpeedLimit->value()));
 }
 
+//用来更新滑动条后面的参数
+//使用滑动条自带的槽函数
 void MainWindow::on_hSliderTemperatureLimit_actionTriggered()
 {
     ui->labelTemperatureLimit->setText(QString::number(ui->hSliderTemperatureLimit->value()));
@@ -177,3 +181,5 @@ void MainWindow::on_pushButtonGetRandomData_clicked()
     }
     updateUI();
 }
+
+
