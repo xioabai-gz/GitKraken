@@ -37,7 +37,6 @@ private slots:
     void on_hSliderWindSpeedLimit_actionTriggered();
     void on_hSliderTemperatureLimit_actionTriggered();
     void on_hSliderIlluminationLimit_actionTriggered();
-
     void on_groupBoxAlarm_clicked(bool checked);
 };
 
