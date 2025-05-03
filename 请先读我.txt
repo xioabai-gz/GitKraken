@@ -1,0 +1,2 @@
+请关闭本工程的Shadow Build功能，否则程序运行时界面中的风向图片无法正常显示。
+如果不关闭本工程的Shadow Build功能，可以将res文件夹复制到Shadow Build生成的build-SimpleWeatherStation-Desktop_Qt_5_14_2_MinGW_64_bit-xxx文件夹内。
